@@ -1,0 +1,37 @@
+# Data Configuration
+data:
+  csv_path: btcusd_4h.csv
+  generate_sample: true
+  sample_size: 3000
+
+# Trading Parameters
+trading:
+  initial_capital: 100000
+  risk_per_trade: 0.01
+  atr_sl_multiplier: 1.5
+  atr_tp_multiplier: 3.0
+  commission: 0.001
+
+# Signal Generation Parameters
+signals:
+  min_ema_distance: 0.05
+  adx_threshold: 25
+  volume_multiplier: 1.1
+
+# Machine Learning Parameters
+ml:
+  forward_bars: 5
+  label_threshold: 0.003
+  n_features: 20
+  feature_selection_method: importance
+  optimize: true
+  n_trials: 30
+  ml_threshold: 0.35
+  test_size: 0.3
+  random_seed: 42
+
+# Paths
+paths:
+  models_dir: saved_models
+  results_dir: results
+  plots_dir: plots
