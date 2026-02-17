@@ -120,7 +120,7 @@ def compute_indicators(df: pd.DataFrame, validate: bool = True) -> pd.DataFrame:
     
     # === Aroon ===
     logger.debug("Computing Aroon")
-    aroon = ta.trend.AroonIndicator(close)
+    aroon = ta.trend.AroonIndicator(high, low)
     df['aroon_up'] = aroon.aroon_up()
     df['aroon_down'] = aroon.aroon_down()
     
