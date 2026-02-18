@@ -111,7 +111,7 @@ class OverfittingVerifier:
         volume = np.random.lognormal(11, 1.2, n_samples)
         
         df = pd.DataFrame({
-            'Date': pd.date_range('2023-01-01', periods=n_samples, freq='H'),
+            'Date': pd.date_range('2023-01-01', periods=n_samples, freq='h'),
             'Open': open_price,
             'High': high,
             'Low': low,

@@ -236,7 +236,7 @@ class DataLoader:
         volume = np.random.lognormal(10, 1, n_samples)
         
         df = pd.DataFrame({
-            'Date': pd.date_range('2020-01-01', periods=n_samples, freq='H'),
+            'Date': pd.date_range('2020-01-01', periods=n_samples, freq='h'),
             'Open': open_price,
             'High': high,
             'Low': low,
